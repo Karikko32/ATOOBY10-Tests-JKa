@@ -19,8 +19,8 @@ jobs:
         with:
           node-version: 18
 
-      - name: Force install devDependencies
-        run: npm install --include=dev
+      - name: Install ALL dependencies including dev
+        run: npm ci --include=dev
 
       - name: Run tests
         run: npm test
