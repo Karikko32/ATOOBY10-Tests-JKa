@@ -3,31 +3,21 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "test": "mocha --require @babel/register",
-    "coverage": "nyc --require ./nyc-entry.cjs mocha 'test/**/*.js'"
+    "test": "mocha",
+    "coverage": "NODE_OPTIONS=\"--loader ./babel-esm-loader.mjs\" nyc mocha 'test/**/*.js'"
   },
   "nyc": {
-    "include": [
-      "src/**/*.js"
-    ],
+    "include": ["src/**/*.js"],
     "exclude": [
-      "test/**/*.js"
+      "test/**/*.js",
+      "src/.internal/**/*.js"
     ],
-    "extension": [
-      ".js"
-    ],
-    "reporter": [
-      "lcov",
-      "text"
-    ],
-    "report-dir": "./coverage",
+    "extension": [".js"],
+    "reporter": ["lcov", "text"],
     "all": true,
-    "require": [
-      "@babel/register"
-    ]
+    "sourceMap": false,
+    "instrument": false
   },
-  "author": "JKa",
-  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.29.0",
     "@babel/preset-env": "^7.29.2",
@@ -35,6 +25,7 @@
     "babel-plugin-istanbul": "^7.0.1",
     "chai": "^6.2.2",
     "mocha": "^11.7.5",
-    "nyc": "^15.1.0"
+    "nyc": "^15.1.0",
+    "istanbul-lib-instrument": "^6.0.1"
   }
 }
