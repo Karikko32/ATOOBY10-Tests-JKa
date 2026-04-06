@@ -19,8 +19,8 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install dependencies
-        run: npm install
+      - name: Force install devDependencies
+        run: npm install --include=dev
 
       - name: Run tests
         run: npm test
