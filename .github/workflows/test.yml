@@ -18,10 +18,10 @@ jobs:
       with:
         node-version: 20
 
-    - name: Install ALL dependencies including dev
+    - name: Install dependencies
       run: npm ci --include=dev
 
-    - name: Run coverage
+    - name: Run coverage (this runs tests + NYC)
       run: npm run coverage
 
     - name: Show lcov.info
