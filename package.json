@@ -13,6 +13,10 @@
   },
   "author": "JKa",
   "license": "MIT",
-  "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "@babel/core": "^7.29.0",
+    "@babel/preset-env": "^7.29.2",
+    "@babel/register": "^7.28.6",
+    "mocha": "^11.7.5"
+  }
 }
