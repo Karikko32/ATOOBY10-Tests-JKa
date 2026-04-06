@@ -1,21 +1,18 @@
 {
   "name": "software-testing-assignment",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "mocha --require @babel/register",
-    "coverage": "nyc node nyc-entry.cjs"
+    "coverage": "nyc --reporter=lcov --reporter=text mocha --require @babel/register \"test/**/*.js\""
   },
-  "author": "",
+  "nyc": {
+    "include": [
+      "src/**/*.js"
+    ]
+  },
+  "author": "JKa",
   "license": "MIT",
-  "devDependencies": {
-    "@babel/core": "^7.29.0",
-    "@babel/preset-env": "^7.29.2",
-    "@babel/register": "^7.23.0",
-    "chai": "^6.2.2",
-    "mocha": "^10.0.0",
-    "nyc": "^15.1.0"
-  }
+  "dependencies": {},
+  "devDependencies": {}
 }
