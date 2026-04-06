@@ -25,9 +25,9 @@ describe('isTypedArray()', () => {
     expect(isTypedArray(new ArrayBuffer(8))).to.equal(false)
   })
 
-  it('palauttaa true jos objektilla on toStringTag joka vastaa typed array -tyyppiä', () => {
+  it('palauttaa false jos objektilla on toStringTag joka vastaa typed array -tyyppiä, mutta ei ole oikea typed array', () => {
     const fake = { [Symbol.toStringTag]: "Uint8Array" }
-    expect(isTypedArray(fake)).to.equal(true)
+    expect(isTypedArray(fake)).to.equal(false)
   })
 
 })
