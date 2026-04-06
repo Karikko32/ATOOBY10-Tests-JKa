@@ -6,21 +6,30 @@
     "test": "mocha --require @babel/register",
     "coverage": "nyc mocha --require @babel/register \"test/**/*.js\""
   },
-"nyc": {
-  "include": ["src/**/*.js"],
-  "all": true,
-  "reporter": ["lcov", "text"],
-  "report-dir": "./coverage",
-  "extension": [".js"],
-  "require": ["@babel/register"]
-}
-  ,
+  "nyc": {
+    "include": [
+      "src/**/*.js"
+    ],
+    "all": true,
+    "reporter": [
+      "lcov",
+      "text"
+    ],
+    "report-dir": "./coverage",
+    "extension": [
+      ".js"
+    ],
+    "require": [
+      "@babel/register"
+    ]
+  },
   "author": "JKa",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.29.0",
     "@babel/preset-env": "^7.29.2",
     "@babel/register": "^7.28.6",
+    "babel-plugin-istanbul": "^7.0.1",
     "chai": "^6.2.2",
     "mocha": "^11.7.5"
   }
