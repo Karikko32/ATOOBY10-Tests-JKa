@@ -4,25 +4,18 @@
   "type": "module",
   "scripts": {
     "test": "mocha",
-    "coverage": "NODE_OPTIONS=\"--loader ./babel-esm-loader.mjs\" nyc mocha \"test/**/*.js\""
+    "coverage": "node nyc-wrapper.cjs"
   },
   "nyc": {
-    "include": [
-      "src/**/*.js"
-    ],
+    "include": ["src/**/*.js"],
     "exclude": [
       "test/**/*.js",
       "src/.internal/**"
     ],
-    "extension": [
-      ".js"
-    ],
-    "reporter": [
-      "lcov",
-      "text"
-    ],
+    "extension": [".js"],
+    "reporter": ["lcov", "text"],
     "all": true,
-    "sourceMap": false,
+    "sourceMap": true,
     "instrument": false
   },
   "devDependencies": {
