@@ -28,7 +28,7 @@ jobs:
       - name: Generate coverage
         run: npm run coverage
 
-      - name: Debug: list workspace
+      - name: "Debug: list workspace"
         run: |
           echo "=== WORKSPACE CONTENTS ==="
           ls -R .
