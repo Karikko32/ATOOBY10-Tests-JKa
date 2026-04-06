@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "test": "mocha --require @babel/register",
-    "coverage": "nyc mocha --require @babel/register \"test/**/*.js\""
+    "test": "mocha",
+    "coverage": "NODE_OPTIONS=\"--loader ./babel-esm-loader.mjs\" nyc mocha \"test/**/*.js\""
   },
   "nyc": {
     "include": [
@@ -22,16 +22,8 @@
       "text"
     ],
     "all": true,
-    "sourceMap": true,
+    "sourceMap": false,
     "instrument": false
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-env"
-    ],
-    "plugins": [
-      "istanbul"
-    ]
   },
   "devDependencies": {
     "@babel/core": "^7.29.0",
