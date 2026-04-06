@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "test": "mocha",
-    "coverage": "NODE_OPTIONS=\"--require @babel/register\" nyc mocha \"test/**/*.js\""
+    "test": "mocha --require @babel/register",
+    "coverage": "nyc mocha --require @babel/register \"test/**/*.js\""
   },
   "nyc": {
     "include": [
