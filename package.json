@@ -10,7 +10,9 @@
   "include": ["src/**/*.js"],
   "all": true,
   "reporter": ["lcov", "text"],
-  "report-dir": "./coverage"
+  "report-dir": "./coverage",
+  "extension": [".js"],
+  "require": ["@babel/register"]
 }
   ,
   "author": "JKa",
