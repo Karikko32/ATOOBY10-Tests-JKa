@@ -4,19 +4,26 @@
   "type": "module",
   "scripts": {
     "test": "mocha",
-    "coverage": "NODE_OPTIONS=\"--loader ./babel-esm-loader.mjs\" nyc mocha 'test/**/*.js'"
+    "coverage": "nyc mocha \"test/**/*.js\""
   },
   "nyc": {
-    "include": ["src/**/*.js"],
+    "include": [
+      "src/**/*.js"
+    ],
     "exclude": [
       "test/**/*.js",
-      "src/.internal/**/*.js"
+      "src/.internal/**"
     ],
-    "extension": [".js"],
-    "reporter": ["lcov", "text"],
+    "extension": [
+      ".js"
+    ],
+    "reporter": [
+      "lcov",
+      "text"
+    ],
     "all": true,
     "sourceMap": false,
-    "instrument": false
+    "instrument": true
   },
   "devDependencies": {
     "@babel/core": "^7.29.0",
