@@ -7,30 +7,21 @@
     "coverage": "nyc mocha --require @babel/register \"test/**/*.js\""
   },
   "nyc": {
-  "include": [
-    "src/**/*.js"
-  ],
-  "exclude": [
-    "test/**/*.js"
-  ],
-  "extension": [
-    ".js"
-  ],
-  "reporter": [
-    "lcov",
-    "text"
-  ],
-  "all": true
-}
-,
+    "include": [
+      "src/**/*.js"
+    ],
+    "exclude": [
+      "test/**/*.js"
+    ],
+    "extension": [
+      ".js"
+    ],
     "reporter": [
       "lcov",
       "text"
     ],
     "report-dir": "./coverage",
-    "extension": [
-      ".js"
-    ],
+    "all": true,
     "require": [
       "@babel/register"
     ]
