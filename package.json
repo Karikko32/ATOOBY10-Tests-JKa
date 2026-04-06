@@ -3,24 +3,44 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "test": "mocha",
-    "coverage": "nyc mocha \"test/**/*.js\""
+    "test": "mocha --require @babel/register",
+    "coverage": "nyc mocha --require @babel/register \"test/**/*.js\""
   },
   "nyc": {
-    "include": ["src/**/*.js"],
+    "include": [
+      "src/**/*.js"
+    ],
     "exclude": [
       "test/**/*.js",
       "src/.internal/**"
     ],
-    "extension": [".js"],
-    "reporter": ["lcov", "text"],
+    "extension": [
+      ".js"
+    ],
+    "reporter": [
+      "lcov",
+      "text"
+    ],
     "all": true,
-    "sourceMap": false,
-    "instrument": true
+    "sourceMap": true,
+    "instrument": false
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ],
+    "plugins": [
+      "istanbul"
+    ]
   },
   "devDependencies": {
+    "@babel/core": "^7.29.0",
+    "@babel/preset-env": "^7.29.2",
+    "@babel/register": "^7.28.6",
+    "babel-plugin-istanbul": "^7.0.1",
     "chai": "^6.2.2",
     "mocha": "^11.7.5",
-    "nyc": "^15.1.0"
+    "nyc": "^15.1.0",
+    "istanbul-lib-instrument": "^6.0.1"
   }
 }
