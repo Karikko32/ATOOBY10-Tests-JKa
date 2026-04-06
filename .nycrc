@@ -1,9 +1,0 @@
-{
-  "include": ["src"],
-  "all": true,
-  "extension": [".js"],
-  "require": [
-    "@babel/register",
-    "./nyc-babel-hook.js"
-  ]
-}

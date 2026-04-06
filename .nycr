@@ -1,7 +1,0 @@
-{
-  "include": ["src"],
-  "reporter": ["text", "html"],
-  "all": true,
-  "extension": [".js"],
-  "require": ["@babel/register"]
-}
