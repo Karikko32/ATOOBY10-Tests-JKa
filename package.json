@@ -6,10 +6,10 @@
     "test": "mocha --require @babel/register",
     "coverage": "nyc --reporter=lcov --reporter=text mocha --require @babel/register \"test/**/*.js\""
   },
-  "nyc": {
-    "include": [
-      "src/**/*.js"
-    ]
+"nyc": {
+  "include": ["src/**/*.js"],
+  "all": true
+}
   },
   "author": "JKa",
   "license": "MIT",
