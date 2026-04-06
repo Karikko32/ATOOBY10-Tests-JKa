@@ -19,9 +19,6 @@ jobs:
         with:
           node-version: 18
 
-      - name: Ensure devDependencies are installed
-        run: npm config set production false
-
       - name: Install dependencies
         run: npm install
 
