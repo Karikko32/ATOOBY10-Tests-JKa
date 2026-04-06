@@ -8,7 +8,9 @@
   },
 "nyc": {
   "include": ["src/**/*.js"],
-  "all": true
+  "all": true,
+  "reporter": ["lcov", "text"],
+  "report-dir": "./coverage"
 }
   ,
   "author": "JKa",
