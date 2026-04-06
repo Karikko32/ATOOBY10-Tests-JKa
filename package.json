@@ -10,7 +10,7 @@
   "include": ["src/**/*.js"],
   "all": true
 }
-  },
+  ,
   "author": "JKa",
   "license": "MIT",
   "devDependencies": {
