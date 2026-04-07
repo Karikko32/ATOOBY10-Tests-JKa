@@ -1,37 +1,16 @@
 {
-  "name": "software-testing-assignment",
-  "version": "1.0.0",
-  "type": "module",
   "scripts": {
     "test": "mocha --require @babel/register",
     "coverage": "nyc mocha --require @babel/register \"test/**/*.js\""
   },
   "nyc": {
-    "include": [
-      "src/**/*.js"
-    ],
-    "exclude": [
-      "test/**/*.js",
-      "src/.internal/**"
-    ],
-    "extension": [
-      ".js"
-    ],
-    "reporter": [
-      "lcov",
-      "text"
-    ],
+    "include": ["src/**/*.js"],
+    "exclude": ["test/**/*.js", "src/.internal/**"],
+    "extension": [".js"],
+    "reporter": ["lcov", "text"],
     "all": true,
     "sourceMap": true,
     "instrument": false
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-env"
-    ],
-    "plugins": [
-      "istanbul"
-    ]
   },
   "devDependencies": {
     "@babel/core": "^7.29.0",
